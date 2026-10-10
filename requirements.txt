@@ -3,9 +3,13 @@
 # CPU build of PyTorch (works everywhere, incl. Streamlit Cloud).
 # Local NVIDIA GPU: after installing this file run
 #   pip install --force-reinstall torch==2.6.0 torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu118
---extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.6.0+cpu
-torchvision==0.21.0+cpu
+# Linux (Streamlit Cloud, Python 3.12): direct CPU wheels, no extra index
+# (an extra index makes uv resolve numpy/pillow from the PyTorch mirror and fail).
+torch @ https://download.pytorch.org/whl/cpu/torch-2.6.0%2Bcpu-cp312-cp312-linux_x86_64.whl ; sys_platform == "linux"
+torchvision @ https://download.pytorch.org/whl/cpu/torchvision-0.21.0%2Bcpu-cp312-cp312-linux_x86_64.whl ; sys_platform == "linux"
+# Windows / macOS: PyPI builds (CPU on Windows)
+torch==2.6.0 ; sys_platform != "linux"
+torchvision==0.21.0 ; sys_platform != "linux"
 ultralytics==8.4.175     # YOLO11 + ByteTrack
 lap==0.5.13              # tracker dependency
 opencv-python==5.0.0.93
