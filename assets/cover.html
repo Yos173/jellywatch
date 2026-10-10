@@ -1,0 +1,50 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>JellyWatch AI cover</title>
+<style>
+  html,body{margin:0;width:1024px;height:576px;overflow:hidden;font-family:"Segoe UI",Arial,sans-serif;}
+  .c{position:relative;width:1024px;height:576px;color:#e6fbff;
+     background:radial-gradient(900px 520px at 18% 10%,#0f4a72 0%,#062239 45%,#030d18 100%);}
+  .waves{position:absolute;left:0;bottom:0;width:100%;height:170px;opacity:.55}
+  .glow{position:absolute;right:-60px;top:-60px;width:420px;height:420px;border-radius:50%;
+        background:radial-gradient(circle,rgba(34,211,238,.22),rgba(34,211,238,0) 70%);}
+  .logo{position:absolute;left:56px;top:62px;width:150px;height:150px}
+  .title{position:absolute;left:232px;top:70px}
+  .title h1{margin:0;font-size:68px;font-weight:800;letter-spacing:.5px;line-height:1}
+  .title h1 span{color:#22d3ee}
+  .title p{margin:12px 0 0;font-size:24px;color:#a8d4ee}
+  .pills{position:absolute;left:56px;top:278px;display:flex;gap:18px}
+  .pill{box-sizing:border-box;width:292px;min-height:132px;padding:18px 20px;border-radius:16px;background:rgba(11,34,54,.78);
+        border:1px solid rgba(34,211,238,.28)}
+  .pill b{display:block;font-size:22px;color:#fff;margin-bottom:6px}
+  .pill small{font-size:15px;color:#a8d4ee;line-height:1.35;display:block}
+  .pill .n{font-size:13px;color:#22d3ee;font-weight:700;letter-spacing:1.5px}
+  .foot{position:absolute;left:56px;right:56px;bottom:34px;display:flex;justify-content:space-between;
+        align-items:flex-end;font-size:17px;color:#a8d4ee}
+  .foot b{color:#fff}
+  .chip{display:inline-block;padding:4px 12px;border-radius:999px;background:#facc15;color:#1b1400;
+        font-weight:800;font-size:14px;letter-spacing:.5px;margin-right:10px}
+</style></head>
+<body><div class="c">
+  <div class="glow"></div>
+  <svg class="waves" viewBox="0 0 1024 170" preserveAspectRatio="none">
+    <path d="M0 90 C170 40 340 140 512 90 C684 40 854 140 1024 90 V170 H0Z" fill="#0b3a5c"/>
+    <path d="M0 120 C170 80 340 160 512 120 C684 80 854 160 1024 120 V170 H0Z" fill="#082a44"/>
+  </svg>
+  <img class="logo" src="logo.svg">
+  <div class="title">
+    <h1>JellyWatch <span>AI</span></h1>
+    <p>Early warning for jellyfish blooms on the UAE coast</p>
+  </div>
+  <div class="pills">
+    <div class="pill"><div class="n">01 · DETECT</div><b>Computer vision</b>
+      <small>YOLO11 counts jellyfish in intake &amp; underwater camera feeds in real time</small></div>
+    <div class="pill"><div class="n">02 · PREDICT</div><b>3-day bloom risk</b>
+      <small>ML on live sea temperature, waves, currents &amp; onshore wind (Open-Meteo)</small></div>
+    <div class="pill"><div class="n">03 · ALERT</div><b>Act before damage</b>
+      <small>Targeted actions for plant operators, beach managers &amp; fishermen</small></div>
+  </div>
+  <div class="foot">
+    <div><span class="chip">ENEC CHALLENGE</span>ATRC ChallengeOn · protecting Barakah's cooling-water intake</div>
+    <div>Team <b>Blue Sentinel</b></div>
+  </div>
+</div></body></html>

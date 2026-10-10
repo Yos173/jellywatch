@@ -1,0 +1,18 @@
+# environments / tooling
+.venv/
+__pycache__/
+*.pyc
+docs/node_modules/
+
+# large, re-downloadable data (see src/detection/prepare_dataset.py, make_demo_videos.py)
+data/images/
+data/videos/raw/
+
+# training runs & scratch outputs
+runs/
+outputs/
+weights/
+
+# model weights: keep only the final detector
+*.pt
+!models/best.pt

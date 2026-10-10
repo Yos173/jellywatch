@@ -1,0 +1,55 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>JellyWatch architecture</title>
+<style>
+  body{margin:0;width:1600px;height:900px;background:#ffffff;font-family:"Segoe UI",Arial,sans-serif;color:#0b2236}
+  .lane{position:absolute;left:30px;width:1540px;border-radius:18px}
+  .lane h3{position:absolute;left:18px;top:10px;margin:0;font-size:20px;letter-spacing:2px;text-transform:uppercase}
+  .l1{top:30px;height:250px;background:#e8f7fb;border:2px solid #9be3f2}
+  .l1 h3{color:#0e7490}
+  .l2{top:310px;height:250px;background:#eef2ff;border:2px solid #c7d2fe}
+  .l2 h3{color:#4338ca}
+  .l3{top:590px;height:280px;background:#fff7ed;border:2px solid #fed7aa}
+  .l3 h3{color:#c2410c}
+  .box{position:absolute;box-sizing:border-box;background:#fff;border:2px solid #0b2236;border-radius:14px;padding:14px 16px;
+       font-size:19px;line-height:1.3;box-shadow:0 4px 0 rgba(11,34,54,.12)}
+  .box b{display:block;font-size:21px;margin-bottom:4px}
+  .box small{color:#475569;font-size:16px}
+  .real{border-color:#059669}.syn{border-color:#c2410c;border-style:dashed}
+  .tag{display:inline-block;font-size:13px;font-weight:700;padding:2px 8px;border-radius:999px;margin-top:6px}
+  .t-real{background:#d1fae5;color:#065f46}.t-syn{background:#ffedd5;color:#9a3412}.t-demo{background:#dbeafe;color:#1e40af}
+  svg{position:absolute;left:0;top:0}
+</style></head><body>
+<div class="lane l1"><h3>1 · Detect</h3></div>
+<div class="lane l2"><h3>2 · Predict</h3></div>
+<div class="lane l3"><h3>3 · Alert &amp; act</h3></div>
+
+<div class="box real" style="left:60px;top:80px;width:300px"><b>Cameras</b>intake screens · underwater · drone<br><span class="tag t-demo">prototype: open footage</span></div>
+<div class="box" style="left:430px;top:80px;width:320px"><b>YOLO11s detector</b>fine-tuned on 3 open datasets<br><small>+ ByteTrack: unique jellyfish IDs</small></div>
+<div class="box" style="left:820px;top:80px;width:320px"><b>Bloom signal</b>count · unique individuals ·<br>smoothed density per frame</div>
+<div class="box" style="left:1210px;top:80px;width:330px"><b>Camera level</b>Low / Medium / High / Critical<br><small>from density thresholds</small></div>
+
+<div class="box real" style="left:60px;top:360px;width:300px"><b>Open ocean data</b>sea temp · waves · currents · wind<br><span class="tag t-real">REAL · Open-Meteo</span></div>
+<div class="box" style="left:430px;top:350px;width:320px"><b>Feature engineering</b>onshore wind per coast · calm-sea streak · SST trend &amp; anomaly · season</div>
+<div class="box syn" style="left:430px;top:478px;width:320px;padding:8px 16px"><b style="font-size:17px;margin:0">Training labels</b><span class="tag t-syn">SYNTHETIC rule → replace with ENEC logs</span></div>
+<div class="box" style="left:820px;top:360px;width:320px"><b>Gradient Boosting</b>bloom risk model<br><small>with explainable drivers</small></div>
+<div class="box" style="left:1210px;top:360px;width:330px"><b>Risk 0–100 + level</b>today + 3 days<br>Barakah · Corniche · Ruwais</div>
+
+<div class="box" style="left:60px;top:660px;width:300px"><b>Dashboard</b>map · live video · forecast · alerts<br><small>+ Telegram / SMS push</small></div>
+<div class="box" style="left:430px;top:660px;width:320px"><b>Fusion</b>forecast risk boosted by<br>live camera evidence</div>
+<div class="box" style="left:820px;top:660px;width:320px"><b>Alert playbook</b>who · where · when ·<br>recommended action</div>
+<div class="box" style="left:1210px;top:645px;width:330px;font-size:18px"><b>Recipients</b>Plant operators — prepare screens<br>Beach managers — swim caution<br>Fishermen — avoid zone</div>
+
+<svg width="1600" height="900">
+  <defs><marker id="a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+    <path d="M0,0 L12,6 L0,12 z" fill="#0b2236"/></marker></defs>
+  <g stroke="#0b2236" stroke-width="3" fill="none" marker-end="url(#a)">
+    <path d="M362 130 H426"/><path d="M752 130 H816"/><path d="M1142 130 H1206"/>
+    <path d="M362 410 H426"/><path d="M752 410 H816"/><path d="M1142 410 H1206"/>
+    <path d="M752 515 C790 515 790 450 816 440"/>
+    <path d="M1300 192 V296 H395 V630 H480 V656" stroke-linejoin="round"/>
+    <path d="M1375 474 V600 H700 V656" stroke-linejoin="round"/>
+    <path d="M752 715 H816"/><path d="M1142 715 H1206"/>
+    <path d="M428 715 H366"/>
+  </g>
+</svg>
+</body></html>

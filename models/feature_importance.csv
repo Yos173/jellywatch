@@ -1,0 +1,16 @@
+feature,importance,label
+sst_c,0.19064495419894387,Sea surface temp
+onshore_wind_3d_mean,0.11872294203269187,Onshore wind 3-day
+sst_7d_change,0.11716888037365486,SST 7-day warming
+month_cos,0.11540828459335904,Season (cos)
+radiation_mj,0.10437075917927442,Solar radiation
+calm_streak_days,0.09923329455184904,Consecutive calm days
+onshore_wind_kmh,0.04317066885414171,Onshore wind
+sst_anomaly,0.03250300999496096,SST anomaly vs month
+sst_3d_mean,0.030088125884128986,SST 3-day mean
+current_kmh,0.029886182431263123,Ocean current
+wind_speed_kmh,0.029234580081472634,Wind speed
+current_3d_mean,0.02849001617185074,Current 3-day mean
+wave_height_m,0.020985151800989872,Wave height
+wave_3d_mean,0.020819511646886137,Waves 3-day mean
+month_sin,0.019273638204532813,Season (sin)

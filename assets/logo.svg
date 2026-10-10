@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="70%">
+      <stop offset="0%" stop-color="#0e3a5c"/>
+      <stop offset="100%" stop-color="#041526"/>
+    </radialGradient>
+    <linearGradient id="bell" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7df9ff"/>
+      <stop offset="100%" stop-color="#1fa2d6"/>
+    </linearGradient>
+    <linearGradient id="tent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5ee7f5" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#5ee7f5" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- background disc -->
+  <circle cx="128" cy="128" r="124" fill="url(#bg)"/>
+  <circle cx="128" cy="128" r="124" fill="none" stroke="#22d3ee" stroke-opacity="0.35" stroke-width="3"/>
+  <!-- sonar / detection arcs -->
+  <g fill="none" stroke="#22d3ee" stroke-linecap="round">
+    <path d="M58 92 A78 78 0 0 1 198 92" stroke-width="5" stroke-opacity="0.35"/>
+    <path d="M40 80 A98 98 0 0 1 216 80" stroke-width="4" stroke-opacity="0.18"/>
+  </g>
+  <!-- jellyfish bell -->
+  <path d="M70 128 C70 80 100 58 128 58 C156 58 186 80 186 128
+           C176 122 168 132 157 126 C147 134 138 124 128 130
+           C118 124 109 134 99 126 C88 132 80 122 70 128 Z" fill="url(#bell)"/>
+  <!-- bell highlight -->
+  <path d="M92 100 C96 82 110 72 126 70" fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="6" stroke-linecap="round"/>
+  <!-- "eye" = AI detection reticle on the bell -->
+  <circle cx="128" cy="102" r="15" fill="#041526" fill-opacity="0.55"/>
+  <circle cx="128" cy="102" r="7" fill="#ffffff"/>
+  <!-- tentacles -->
+  <g fill="none" stroke="url(#tent)" stroke-width="6" stroke-linecap="round">
+    <path d="M90 132 C84 152 98 168 88 196"/>
+    <path d="M110 134 C104 160 118 176 110 214"/>
+    <path d="M128 134 C122 162 136 182 128 222"/>
+    <path d="M146 134 C140 160 154 176 146 214"/>
+    <path d="M166 132 C160 152 174 168 166 196"/>
+  </g>
+  <!-- detection bounding-box corners -->
+  <g fill="none" stroke="#facc15" stroke-width="5" stroke-linecap="round">
+    <path d="M56 70 V52 H74"/>
+    <path d="M200 70 V52 H182"/>
+    <path d="M56 186 V204 H74"/>
+    <path d="M200 186 V204 H182"/>
+  </g>
+</svg>

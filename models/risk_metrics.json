@@ -1,0 +1,13 @@
+{
+  "train_days": 4170,
+  "test_days": 1041,
+  "test_period": "2025-10-22 .. 2026-10-03",
+  "roc_auc": 0.801,
+  "brier": 0.17,
+  "bloom_rate": 0.391,
+  "data_source": [
+    "open-meteo"
+  ],
+  "labels": "SYNTHETIC (expert rule + noise) \u2014 see features.py",
+  "trained_on": "2026-10-10"
+}
