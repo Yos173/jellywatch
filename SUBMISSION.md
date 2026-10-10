@@ -3,6 +3,8 @@
 **Team:** Blue Sentinel   **Member:** Yosef (solo)
 **Challenge:** ATRC ChallengeOn · ENEC — sustainable management of seasonal jellyfish blooms
 **Cover image:** `assets/cover.png` (1024×576)   **Logo:** `assets/logo.png` / `assets/logo.svg`
+**Live demo:** https://jellywatch.streamlit.app
+**Source code:** https://github.com/Yos173/jellywatch
 
 ---
 

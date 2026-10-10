@@ -5,6 +5,8 @@
 **Detect · Predict · Alert** — early warning for jellyfish blooms on the UAE coast.
 ATRC ChallengeOn · ENEC challenge · Team **Blue Sentinel** (Yosef)
 
+**Live demo:** https://jellywatch.streamlit.app · **Code:** https://github.com/Yos173/jellywatch
+
 > *How might we advance the sustainable management of seasonal jellyfish blooms in coastal environments?*
 
 ![cover](assets/cover.png)
